@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: weather-api
+    env: python
+    buildCommand: ""
+    startCommand: uvicorn weather_api:app --host 0.0.0.0 --port 10000
+    plan: free
+    branch: main
+    autoDeploy: true
