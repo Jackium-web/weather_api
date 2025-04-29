@@ -5,7 +5,7 @@ import os
 app = FastAPI()
 
 # Your OpenWeatherMap API Key (you need to get one free)
-API_KEY = "bba07af820161672b7ff90dd2fc9f4c4"
+API_KEY = os.getenv("API_KEY")
 
 @app.get("/weather")
 def get_weather(city: str):
